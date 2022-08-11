@@ -1,20 +1,17 @@
 #include "main.h"
 
 /**
- * main - Program that prints string
- * Return: 0
+ * print_alphabet - Functions prints the alphabet in lowercase
+ *
  */
 
-int main(void)
+void print_alphabet(void)
 {
-	char mystring[9] = "Holberton";
+	char letter;
 
-	int i;
-
-	for (i = 0; i < 9; i++)
-		_putchar(mystring[i]);
-
-	_putchar('\n');
-
-	return (0);
+	for (letter = 'a'; letter <= 'z'; letter++)
+	{
+	_putchar(letter);
+	}
+_putchar('\n');
 }
