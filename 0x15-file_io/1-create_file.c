@@ -1,34 +1,40 @@
-#include "holberton.h"
-
+#include "main.h"
+#include <stdlib.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 /**
  * create_file - function that creates a file
- * @filename: Const char for name of file to be created
- * @text_content: NULL terminated char string to write to the file
- * Return: Returns: 1 on success, -1 on failure or if file name is NULL
+ * @filename: name of the file
+ * @text_content: content of the file
+ * Return: 1 Succes or -1 if fail
  */
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd, i, len = 0, n_write;
+	ssize_t fd;
+	int buffer, i = 0;
 
 	if (filename == NULL)
 		return (-1);
 
-	if (text_content == NULL)
-		text_content = "";
-
-	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 
 	if (fd < 0)
 		return (-1);
 
-	for (i = 0; text_content[i]; i++)
-		len++;
+	if (text_content != NULL)
+	{
+		while (text_content[i] != '\0')
+			i++;
 
-	n_write = write(fd, text_content, len);
+		buffer = write(fd, text_content, i);
 
-	if (n_write < 0)
-		return (-1);
+		if (buffer < 0)
+			return (-1);
+	}
+
+	close(fd);
 
 	return (1);
 }
