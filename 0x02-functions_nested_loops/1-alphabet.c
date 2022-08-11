@@ -1,19 +1,20 @@
 #include "main.h"
 
 /**
- *  prints the alphabet, in lowercase, followed by a new line.
- *
- *
+ * main - Program that prints string
+ * Return: 0
  */
 
-void print_alphabet(void);
+int main(void)
 {
-    char letter;
+	char mystring[9] = "Holberton";
 
-    for (letter = 'a'; letter <= 'z'; letter++)
-   {
-       _putchar(letter);
-   }
+	int i;
 
-    _putchar('\n');
+	for (i = 0; i < 9; i++)
+		_putchar(mystring[i]);
+
+	_putchar('\n');
+
+	return (0);
 }
