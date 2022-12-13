@@ -2,18 +2,21 @@
 #define LISTS_H
 
 /**
- * struct dlistint_s - Doubly linked list node
+ * struct dlistint_s - doubly linked list
  * @n: integer
- * @next: points to the next node
  * @prev: points to the previous node
+ * @next: points to the next node
+ *
  * Description: doubly linked list node structure
- * for project
+ *
  */
-typedef struct dlistint_t {
+typedef struct dlistint_s {
   int n;
-  struct dlistint_t *prev;
-  struct dlistint_t *next;
+  struct dlistint_s *prev;
+  struct dlistint_s *next;
 } dlistint_t;
+
+#include <stddef.h>
 
 size_t print_dlistint(const dlistint_t *h);
 size_t dlistint_len(const dlistint_t *h);
