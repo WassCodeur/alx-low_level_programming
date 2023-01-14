@@ -1,0 +1,21 @@
+;Auto-generated Diamond Directive File. Can be deleted without harm.
+.Set CabinetNameTemplate=C:\Users\HP 340\Desktop\ALX\alx-low_level_programming\0x00-hello_world\~101-quote.CAB
+.Set CompressionType=LZX
+.Set CompressionLevel=7
+.Set InfFileName=C:\Users\HP 340\Desktop\ALX\alx-low_level_programming\0x00-hello_world\~5-printf_LAYOUT.INF
+.Set RptFileName=C:\Users\HP 340\Desktop\ALX\alx-low_level_programming\0x00-hello_world\~101-quote.RPT
+.Set MaxDiskSize=CDROM
+.Set ReservePerCabinetSize=0
+.Set InfCabinetLineFormat=*cab#*=Application Source Media,*cabfile*,0
+.Set Compress=on
+.Set CompressionMemory=21
+.Set DiskDirectoryTemplate=
+.Set Cabinet=ON
+.Set MaxCabinetSize=999999999
+.Set InfDiskHeader=
+.Set InfDiskLineFormat=
+.Set InfCabinetHeader=[SourceDisksNames]
+.Set InfFileHeader=
+.Set InfFileHeader1=[SourceDisksFiles]
+.Set InfFileLineFormat=*file*=*cab#*,,*size*,*csum*
+"C:\Users\HP 340\Desktop\ALX\alx-higher_level_programming\0x08-python-more_classes\3-main.py"

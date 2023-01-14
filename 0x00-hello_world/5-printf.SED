@@ -1,0 +1,37 @@
+[Version]
+Class=IEXPRESS
+SEDVersion=3
+[Options]
+PackagePurpose=ExtractOnly
+ShowInstallProgramWindow=0
+HideExtractAnimation=0
+UseLongFileName=1
+InsideCompressed=0
+CAB_FixedSize=0
+CAB_ResvCodeSigning=0
+RebootMode=I
+InstallPrompt=%InstallPrompt%
+DisplayLicense=%DisplayLicense%
+FinishMessage=%FinishMessage%
+TargetName=%TargetName%
+FriendlyName=%FriendlyName%
+AppLaunched=%AppLaunched%
+PostInstallCmd=%PostInstallCmd%
+AdminQuietInstCmd=%AdminQuietInstCmd%
+UserQuietInstCmd=%UserQuietInstCmd%
+SourceFiles=SourceFiles
+[Strings]
+InstallPrompt=
+DisplayLicense=
+FinishMessage=
+TargetName=C:\Users\HP 340\Desktop\ALX\alx-low_level_programming\0x00-hello_world\5-printf.exe
+FriendlyName=Wass
+AppLaunched=
+PostInstallCmd=
+AdminQuietInstCmd=
+UserQuietInstCmd=
+FILE0="3-main.py"
+[SourceFiles]
+SourceFiles0=C:\Users\HP 340\Desktop\ALX\alx-higher_level_programming\0x08-python-more_classes\
+[SourceFiles0]
+%FILE0%=
