@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+struct Node{
+  int a;
+  struct Node *next;
+}, node;
+
+typedef node s_node;
+s_node s0, S1, s2, *debut, *temp;
+
+int main(void)
+{
+  debut = &s2;
+  debut->a = 0;
+  debut->next = NULL;
+
+  temp = &S1;
+  temp->a = 2;
+  temp->next = debut;
+  debut = temp;
+
+temp = &s0;
+temp->a = 5;
+temp->next = debut;
+debut = temp;
+
+s_node *p_s = debut;
+do{
+printf("%d", p_s->a);
+p_s = p_s->next;
+}while(p_s->NEXT != NULL)
+
+printf("fin list merci !!!");
+
+return 0;
+}
