@@ -1,7 +1,4 @@
-#ifndef __SEARCH_ALGOS__
-#define __SEARCH_ALGOS__
+#ifndef __SEARCH_ALGO__
+#define __SEARCH_ALGO__
 
-int linear_search(int *array, size_t size, int value);   
-int binary_search(int *array, size_t size, int value);
-
-#endif /* HEADER_FILE */ 
+#endif
