@@ -1,18 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 /**
- * struct dlistint_s - doubly linked list
- * @n: integer
- * @prev: points to the previous node
- * @next: points to the next node
- *
- * Description: returns the number of elements in a linked
- *
- */
-size_t dlistint_len(const dlistint_t *h) {
-  size_t i = 0;
-  while (h != NULL) {
-    h = h->next;
-    i++;
-  }
-  return i;
+  * dlistint_len - return the number of element in dlistint_t
+  * @h: pointer to the first node
+  *
+  * Return: number of element in dlistint_t
+  */
+size_t dlistint_len(const dlistint_t *h)
+{
+	const dlistint_t *ptr = h;
+	size_t num;
+
+	num = 0;
+	while (ptr != NULL)
+	{
+		num++;
+		ptr = ptr->next;
+	}
+	return (num);
 }
