@@ -1,27 +1,26 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-
+#include "hash_tables.h"
 
 /**
- * main - check the code for
+ * hash_table_create - Creates a hash table.
+ * @size: The size of the array.
  *
- * Return: Always EXIT_SUCCESS.
+ * Return: If an error occurs - NULL..
  */
-int hachage(char *chaine){
-    int i = 0, nombreHache = 0;
-
-    for (i = 0 ; chaine[i] != '\0' ; i++)
-    {
-        nombreHache += chaine[i];
-    }
-    nombreHache %= 100;
-
-    return nombreHache;
-    }
-int main(void)
+hash_table_t *hash_table_create(unsigned long int size)
 {
-printf("%d\n", hachage("Hel"));
-printf("%d", hachage("Cau"));
- 
+	hash_table_t *ht;
+	unsigned long int i;
+
+	ht = malloc(sizeof(hash_table_t));
+	if (ht == NULL)
+		return (NULL);
+
+	ht->size = size;
+	ht->array = malloc(sizeof(hash_node_t *) * size);
+	if (ht->array == NULL)
+		return (NULL);
+	for (i = 0; i < size; i++)
+		ht->array[i] = NULL;
+
+	return (ht);
 }
